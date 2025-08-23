@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TZcoreX - Toko Gadget Terpercaya</title>
+    <link rel="stylesheet" href="storestyle.css">
+    <link rel="icon" href="img/TianzzCoreX.png">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a class="logo" href="#home">
+                <div class="logo">TZcoreXStore</div>
+            </a>
+            <button class="menu-toggle" onclick="toggleMenu()">Menu</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Produk</a></li>
+                <li><a href="#testimonials">Testimoni</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero" id="home">
+            <h1>Gadget Terkini, Harga Terjamin</h1>
+            <p>Temukan koleksi gadget terbaru dengan harga terbaik dan garansi resmi.</p>
+            <a href="#products" class="cta-button">Lihat Produk</a>
+        </section>
+        <section class="products" id="products">
+            <h2>Produk Unggulan</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="img/product1.jpg" alt="Samsung Galaxy S24 Ultra">
+                    </div>
+                    <h3 class="product-name">Samsung Galaxy S24 Ultra</h3>
+                    <p class="product-price">Rp 21.999.000</p>
+                    <button class="cta-button">Beli</button>
+                    <button class="cta-button">Pre Order</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="img/product2.jpg" alt="iPhone 15 Pro Max">
+                    </div>
+                    <h3 class="product-name">iPhone 15 Pro Max</h3>
+                    <p class="product-price">Rp 24.999.000</p>
+                    <button class="cta-button">Beli</button>
+                    <button class="cta-button">Pre Order</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="img/product3.jpg" alt="Xiaomi 14 Ultra">
+                    </div>
+                    <h3 class="product-name">Xiaomi 14 Ultra</h3>
+                    <p class="product-price">Rp 16.999.000</p>
+                    <button class="cta-button">Beli</button>
+                    <button class="cta-button">Pre Order</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="img/product4.jpg" alt="Power Bank Ultra">
+                    </div>
+                    <h3 class="product-name">Power Bank Ultra</h3>
+                    <p class="product-price">Rp 30.000.000</p>
+                    <button class="cta-button">Beli</button>
+                    <button class="cta-button">Pre Order</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="img/product5.jpg" alt="Oppo Find X7 Ultra">
+                    </div>
+                    <h3 class="product-name">Oppo Find X7 Ultra</h3>
+                    <p class="product-price">Rp 18.999.000</p>
+                    <button class="cta-button">Beli</button>
+                    <button class="cta-button">Pre Order</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="img/product6.jpg" alt="Vivo X200 Pro">
+                    </div>
+                    <h3 class="product-name">Vivo X200 Pro</h3>
+                    <p class="product-price">Rp 17.999.000</p>
+                    <button class="cta-button">Beli</button>
+                    <button class="cta-button">Pre Order</button>
+                </div>
+            </div>
+        </section>
+        <section class="testimonials" id="testimonials">
+            <h2>Apa Kata Pelanggan</h2>
+            <marquee behavior="scroll" direction="up" onmouseover="this.stop();" onmouseout="this.start();"
+                scrollamount="4">
+                <div class="testimonial-item">
+                    <p class="testimonial-text">"Produk original, pengiriman cepat, dan harga bersaing!"</p>
+                    <p class="testimonial-author">- Budi S.</p>
+                </div>
+                <div class="testimonial-item">
+                    <p class="testimonial-text">"Pelayanan ramah dan responsif, barang sesuai deskripsi."</p>
+                    <p class="testimonial-author">- Maya R.</p>
+                </div>
+                <div class="testimonial-item">
+                    <p class="testimonial-text">"Sudah langganan 2 tahun, selalu puas dengan kualitasnya."</p>
+                    <p class="testimonial-author">- Andi P.</p>
+                </div>
+
+            </marquee>
+        </section>
+        <section class="cta-section" id="contact">
+            <h2>Dapatkan Penawaran Spesial</h2>
+            <form class="cta-form" id="ctaForm" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Masukan Nama Anda" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Masukan Email Anda" required>
+                </div>
+                <button type="submit" class="cta-button">Daftar Sekarang</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 TZcoreXStore. Hak Cipta Dilindungi.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+
+            if (name.trim() === '' || email.trim() === '') {
+                alert('Mohon isi semua field!');
+                return;
+            }
+            alert(`Terima kasih, ${name}! Kami akan menghubungi Anda di ${email}`);
+            document.getElementById('ctaForm').reset();
+        }
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
